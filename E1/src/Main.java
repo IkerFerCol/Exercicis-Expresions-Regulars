@@ -7,10 +7,9 @@ class Main {
         String regex = "\\d{3}-\\d{3}-\\d{3}";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
-
-
         while (matcher.find()) {
             System.out.println("Numero: " + matcher.group());
+            System.out.println("inicio: " + matcher.start() + ", final: " + matcher.end());
         }
     }
 }
